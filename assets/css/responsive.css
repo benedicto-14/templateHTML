@@ -1,0 +1,200 @@
+/* Principal */
+@media screen and (max-width: 720px) {
+    .mesaje-bienvenida{
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .img-principal, .frase-principal{
+        width: 100%;
+    }
+
+    .frase-principal{
+        padding-top: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .navegacion a, .cliente-opciones{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .menu i {
+        color: white;
+        font-size: 2.5rem;
+    }
+}
+
+/* Menu */
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+  
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* Sevicios */
+@media screen and (max-width: 900px) {
+    .servicios{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .serv-title{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 630px) {
+    .servicios{
+        grid-template-columns: repeat(1,1fr);
+        padding: 3.5rem 0;
+    }
+    .descripcion p{ text-align: center; }
+}
+
+/* Categoria */
+@media screen and (max-width: 840px) {
+    .c4{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .categorias{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .categorias{
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 4rem 8rem 4rem;
+    }
+
+    .ofertas{
+        padding: 5rem 4rem 4rem 4rem;
+    }
+}
+
+/* Oferta */
+@media screen and (max-width: 1000px) {
+    .oferta{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .oferta-descripcion{
+        grid-column: 1/3;
+        padding-top: 2rem;
+    }
+    .oferta-titulo h2,
+    .oferta-titulo h4,
+    .oferta-descripcion p{
+        text-align: center;
+    }
+
+    .btn-add-off{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .oferta{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .oferta-descripcion{
+        grid-column: 1/2;
+    }
+    .of-centrar{
+        display: flex;
+        justify-content: center;
+    }
+    .oferta-categoria{
+        width: 100%;
+    }
+
+    .oferta-categoria ul{
+        align-items: center;
+        padding: 0;
+    }
+
+    .oferta-tiempo{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Productos */
+
+@media screen and (max-width: 850px) {
+    .productos{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .productos{
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 4rem;
+        margin-bottom: 4rem;
+    }
+}
+
+/* Footer */
+
+@media screen and (max-width: 850px) {
+    .footer-info{
+        grid-template-columns: repeat(2,1fr);
+        gap: 4rem;
+    }
+    .quick-links{
+        align-items: center;
+        padding-left: 0;
+    }
+    .footer-info h3,
+    .footer-info h4{
+        text-align: center;
+    }
+    .contacto p{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .footer-info{
+        display: block;
+    }
+    .footer-info h4{
+        padding-top: 3rem;
+        font-size: 2.4rem;
+    }
+    .contacto p{
+        text-align: center;
+    }
+}

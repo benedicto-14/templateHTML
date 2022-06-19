@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Open+Sans:wght@300&display=swap');
+
+:root{
+    --primario: #480ca8;
+    --secundario: #ff006e;
+    --terciario: #fb8500;
+    --cuartario: #00f5d4;
+    --fuente-principal: 'Kdam Thmor Pro', sans-serif;
+    --fuente-secundaria: 'Open Sans', sans-serif;
+}
+
+/* Ponder utilizar los rem */
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+    margin: 0;
+}
+/* ---------------------- */
+
+/* Globales */
+body{
+    /* background-color: var(--primario); */
+    font-size: 1.6rem; /* 16px */
+    /* line-height: 1.5; */
+}
+p{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+
+/* Utilidades */
+
+.boton{
+    background-color: var(--cuartario);
+    color: white;
+    padding: 1rem;
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.seccion{
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.center{
+    text-align: center;
+}
+
+/* Principal */
+.principal{
+    height: 100vh;
+    background: rgb(131,56,236);
+    background: linear-gradient(90deg, rgba(131,56,236,1) 0%, rgba(255,0,110,1) 100%);
+}
+
+.principal-contenido{
+    padding: 2.5rem 4rem;
+    position: fixed;
+    width: 100%;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 2.5rem 1rem 2.5rem;
+}
+
+.animacion{
+    transition: .5s;
+}
+
+.nv-border{
+    background: var(--primario);
+
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+
+    -webkit-box-shadow: 1px 22px 14px -15px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 22px 14px -15px rgba(0,0,0,0.1);
+    box-shadow: 1px 22px 14px -15px rgba(0,0,0,0.1);
+}
+
+.nav-bar{
+    display: flex;
+    gap: 4rem;
+}
+
+.navegacion{
+    padding-left: 2rem;
+}
+
+.navegacion a{
+    padding-right: 1rem;
+    color: white;
+}
+
+.logo, .navegacion a{
+    transform: none;
+    -webkit-transform: translate(0px, -1.5rem) ;
+    -moz-transform: translate(0px, -1.5rem) ;
+    -o-transform: translate(0px, -1.5rem) ;
+    -ms-transform: translate(0px, -1.5rem) ;
+}
+
+.logo{
+    width: 3rem;
+    height: 3rem;
+}
+
+.cliente-opciones .fa{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.mesaje-bienvenida{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.img-principal, .frase-principal{
+    color: white;
+    width: 50%;
+}
+
+.img-principal img{
+    width: 100%;
+}
+
+.menu{
+    display: none;
+}
+
+/* Cart number */
+
+.badge:after{
+    content:attr(value);
+    font-size:12px;
+    color: #fff;
+    background: red;
+    border-radius:50%;
+    padding: .1rem .5rem;
+    position:relative;
+    left:-8px;
+    top:-15px;
+    opacity:0.9;
+}
+
+/* Servicios */
+
+.servicios{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    padding: 6.5rem 4rem;
+    background-color: rgba(72, 12, 168, .1);
+    text-align: center;
+}
+
+.servicios h3{
+    font-weight: bold;
+}
+
+.servicios .fa{
+    color: var(--primario);
+    font-size: 5rem;
+}
+
+.servicios p{
+    color: gray;
+}
+
+.serv-title{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+/* Categorias */
+
+
+@media screen and (min-width: 840px) {
+    .categorias{        
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+
+    .posicion-1{
+        grid-row: 1/3;
+    }
+    
+    .posicion-2{
+        grid-column: 2/4;
+    }
+}
+
+.categorias{
+    display: grid;
+    margin: 0 8rem 8rem 8rem;
+}
+
+.categoria h3{
+    font-size: 4.5rem;
+    color: rgba(255, 255, 255, .4);
+    padding-bottom: 2rem;
+}
+
+.categorias img{
+    width: 100%;
+}
+
+.categoria{
+    margin: .5rem;
+    background-color: var(--primario);
+    padding: 2rem;
+    
+    cursor: pointer;
+
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+}
+
+.c1{
+    background: hsla(217, 100%, 50%, 1);
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+}
+
+.c2{
+    background: hsla(33, 100%, 53%, 1);
+    background: linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF930F", endColorstr="#FFF95B", GradientType=1 );
+}
+
+.c3{
+    background: hsla(213, 77%, 14%, 1);
+    background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
+}
+
+.c4{
+    background: hsla(323, 91%, 51%, 1);
+    background: linear-gradient(90deg, hsla(323, 91%, 51%, 1) 0%, hsla(329, 20%, 24%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(323, 91%, 51%, 1) 0%, hsla(329, 20%, 24%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(323, 91%, 51%, 1) 0%, hsla(329, 20%, 24%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F4119E", endColorstr="#4A313E", GradientType=1 );
+}
+
+.c4 img{
+    height: 20rem;
+    width: auto;
+}
+
+.c4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c1, .c2, .c3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Oferta */
+
+.ofertas{
+    background-color: rgba(72, 12, 168, .1);
+    padding: 5rem 11rem 0 11rem;
+}
+
+.oferta{
+    display: grid;
+    grid-template-columns: 25% 45% 30%;
+}
+
+.oferta img{
+    width: 100%;
+}
+
+.oferta-categoria{
+    background-color: white;
+    height: 35rem;
+    width: 22.5rem;
+    border-radius: 5%;
+}
+
+.oferta-categoria h3{
+    text-align: center;
+    margin: 3rem 0;
+    padding-top: 3rem;
+}
+
+.oferta-categoria ul{
+    list-style: none;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.categoria-activa{
+    text-decoration: underline double var(--primario);
+    text-underline-position: under;
+}
+
+.oferta-tiempo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.oferta-descripcion{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.oferta-titulo h4{
+    margin-top: 1.5rem;
+    font-size: 4rem;
+}
+
+.oferta-titulo span{
+    color: gray;
+    text-decoration: line-through;
+    font-size: 2rem;
+}
+
+.oferta-descripcion p{
+    text-align: justify;
+    color: gray;
+}
+
+.oferta-descripcion button{
+    background-color: var(--terciario);
+    color: white;
+    border: none;
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.oferta-rango{
+    margin: 1rem 0;
+}
+
+.oferta-stock{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .8rem;
+}
+
+.rango, .rango-valor{
+    width: 100%;
+    height: 1.2rem;
+    border-radius: 2px;
+}
+
+.rango{
+    background-color: rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.rango-valor{
+    position: absolute;
+    width: 20%;
+    background-color: var(--primario);
+}
+
+.btn-add-off{
+    display: flex;
+    justify-content: end;
+}
+
+.ofertas{
+    padding-bottom: 4rem;
+}
+
+/* Productos */
+.productos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3rem;
+    text-align: center;
+    margin: 0 8rem;
+    margin-bottom: 4rem;
+}
+
+.producto img{
+    width: 100%;
+    background-color: rgba(72, 12, 168, .1);
+    border-radius: 20px;
+}
+
+.producto-descripcion{
+    margin-top: 1.5rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-add{
+    border: 1px solid var(--terciario);
+    color: var(--terciario);
+    background-color: white;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.btn-add:hover{
+    color: white;
+    background-color: var(--terciario);
+}
+
+.btn-add i{
+    font-size: 2rem;
+    margin: .5rem 1rem;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    background-color: black;
+    color:white;
+    padding: 2rem;
+}
+
+.footer-info{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 35%;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.descripcion p{
+    text-align: justify;
+    margin-top: 2rem;
+}
+
+.quick-links{
+    display: flex;
+    flex-direction: column;
+    padding-left: 8rem;
+}
+
+.quick-links a{
+    color: white;
+    padding-top: .5rem;
+    font-size: 1.5rem;
+}
+
+.quick-links h4, .contacto h4, .subscribe h4{
+    margin-bottom: 2rem;
+}
+
+.subscribe h3{
+    margin-bottom: 1.5rem;
+}
+
+.email-subs{
+    width: 100%;
+}
+
+.email-subs input{
+    color: gray;
+}
+
+.email-subs input,.email-subs button{
+    height: 3.5rem;
+    border-radius: 7px;
+}
+
+.email-subs button{
+    background-color: var(--cuartario);
+    color: white;
+}
+
+email-subs{
+    display: flex;
+}
+
+.email-subs input{
+    width: 68%;
+}
+
+.email-subs button{
+    width: 30%;
+}
+
+.contacto p{
+    text-align: justify;
+}
+
+/* Titulos */
+h1,h2,h3{
+    font-family: var(--fuente-principal);
+}
+
+/* Contenido */
+.navegacion a,
+.boton,
+p,li,h4,h5,
+button{
+    font-family: var(--fuente-secundaria);
+}
